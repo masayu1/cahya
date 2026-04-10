@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cahya Mas - Toko Buku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+  <nav>
+  <a href="#">Beranda</a>
+  <a href="#produk">Produk</a>
+  <a href="#form">Checkout</a>
+</nav>
+
+<header>
+  <img src="profil.jpeg" alt="Foto Profil Cahya Mas" class="foto-profil">
+
+  <h1>Cahya Mas</h1>
+  <p>⭐ 4.8 | 100+ Pengikut</p>
+
+  <p>
+    Cahya Mas adalah platform katalog novel yang menghadirkan berbagai cerita menarik dari berbagai genre, 
+    mulai dari romansa, fantasi, hingga misteri.
+  </p>
+</header>
+
+<main class="container">
+
+<div id="preview"></div>
+
+<section id="produk">
+  <h2>Daftar Buku</h2>
+
+  <div class="cards" id="bookList"></div>
+
+  <h3>Tambah Buku</h3>
+  <input type="text" id="judul" placeholder="Judul">
+  <input type="text" id="penulis" placeholder="Penulis">
+  <input type="number" id="harga" placeholder="Harga">
+  <button onclick="tambahBuku()">Tambah Buku</button>
+</section>
+
+<section id="form">
+  <form id="formBeli">
+
+    <!-- BAGIAN PILIH BUKU -->
+    <h3>Data Buku</h3>
+
+    <label for="buku">Pilih Buku</label>
+    <select id="buku">
+      <option value="">-- Pilih Buku --</option>
+      <option>Novel Romansa</option>
+      <option>Novel Fantasi</option>
+      <option>Novel Misteri</option>
+    </select>
+    <span id="errBuku" class="error"></span>
+
+    <!-- BAGIAN DATA PEMBELI -->
+    <h3>Data Pemesan</h3>
+
+    <label for="nama">Nama</label>
+    <input type="text" id="nama">
+    <span id="errNama" class="error"></span>
+
+    <label for="email">Email</label>
+    <input type="email" id="email">
+    <span id="errEmail" class="error"></span>
+
+    <label for="password">Password</label>
+    <input type="password" id="password">
+    <span id="errPassword" class="error"></span>
+
+    <label for="hp">No HP</label>
+    <input type="number" id="hp">
+    <span id="errHp" class="error"></span>
+
+    <!-- PEMBAYARAN -->
+    <h3>Pembayaran</h3>
+
+    <label for="pembayaran">Metode Pembayaran</label>
+    <select id="pembayaran">
+      <option value="">-- Pilih --</option>
+      <option>Transfer Bank</option>
+      <option>COD</option>
+      <option>E-Wallet</option>
+    </select>
+    <span id="errBayar" class="error"></span>
+
+    <button type="submit">Beli Sekarang</button>
+
+  </form>
+</section>
+
+  <label>Jenis Pengiriman</label><br>
+  <input type="radio" name="kirim" value="Reguler"> Reguler
+  <input type="radio" name="kirim" value="Express"> Express
+  <span id="errKirim" class="error"></span>
+
+  <label>
+    <input type="checkbox" id="setuju">
+    Saya menyetujui syarat & ketentuan
+  </label>
+  <span id="errSetuju" class="error"></span>
+
+  <button type="submit">Beli</button>
+</form>
+
+</form>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Cahya Mas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
